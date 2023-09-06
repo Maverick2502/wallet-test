@@ -1,0 +1,149 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+
+  max-height: 512px;
+  height: 100%;
+
+  @media (max-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 100%;
+  }
+
+  &_header {
+    display: flex;
+    flex-direction: row;
+
+    gap: 24px;
+
+    @media (max-width: $breakpoint-sm) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > h1 {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+
+      color: $light-greyscale-text-primary;
+
+      @media (max-width: $breakpoint-sm) {
+        text-align: center;
+      }
+    }
+  }
+
+  &_img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1;
+
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+}
+
+.btn {
+  padding: 12px 32px;
+
+  width: 198px;
+
+  z-index: 2;
+
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+
+  gap: 8px;
+
+  & > button {
+    cursor: pointer;
+  }
+
+  &_selected {
+    position: relative;
+  }
+
+  &_selected::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -12.5px;
+
+    width: 100%;
+    height: 2px;
+
+    border-radius: 2px;
+    background: $light-assents-accent-1-primary;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &_w500 {
+    width: 500px;
+  }
+
+  &_w200 {
+    width: 248px !important;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100% !important;
+    }
+  }
+
+  &_w300 {
+    width: 300px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .flex {
+    @include position_element();
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}

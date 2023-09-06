@@ -1,0 +1,16 @@
+{
+  "short_name": "SFXDX",
+  "name": "Площадка для управления токенами",
+  "description": "Площадка для управления токенами",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#092326",
+  "background_color": "#092326",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

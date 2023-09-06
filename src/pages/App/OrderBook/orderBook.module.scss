@@ -1,0 +1,118 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 864px;
+  max-height: 864px;
+  height: 100%;
+
+  min-width: 310px;
+  width: 100%;
+
+  padding: 34px 16px;
+
+  @media (max-width: $breakpoint-sm) {
+    display: flex;
+
+    max-width: 335px;
+    min-width: 335px;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  &_header {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+
+    margin-left: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.table-responsive {
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  &_head > th,
+  &_body > td {
+    text-align: left;
+
+    gap: 20px;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: 14px;
+    margin-bottom: 20px;
+
+    & > th {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+
+      line-height: 100%;
+      letter-spacing: -0.24px;
+
+      color: $light-greyscale-text-primary;
+    }
+  }
+
+  &_body {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 100%;
+    letter-spacing: -0.32px;
+
+    color: $light-greyscale-text-primary;
+
+    & > td {
+      margin-bottom: 8px;
+    }
+
+    &_leftColumn {
+      height: 48px;
+
+      max-width: 65%;
+      width: 100%;
+    }
+
+    &_rightColumn {
+      display: flex;
+      align-items: center;
+
+      max-width: 25%;
+      width: 100%;
+    }
+  }
+}
+
+.indicator {
+  padding: 16px 14px;
+
+  background-color: $light-assents-accent-1-quaternary;
+  border-radius: 8px;
+}

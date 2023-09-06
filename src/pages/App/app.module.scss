@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  max-width: $desktop-width;
+  width: 100%;
+
+  padding: 44px 70px 86px 70px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: $width-sm;
+    width: 100%;
+
+    padding: 0px;
+  }
+}
+
+.wrapper {
+  display: flex;
+
+  width: 100%;
+
+  margin: 0 auto;
+  margin-bottom: 90px;
+
+  gap: 20px;
+
+  @media (max-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 970px;
+  min-width: 970px;
+  width: 100%;
+
+  gap: 20px;
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: 335px;
+    min-width: 335px;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+}

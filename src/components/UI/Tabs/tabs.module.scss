@@ -1,0 +1,44 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.orderSide {
+  min-height: 36px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  width: 310px;
+  padding: 4px;
+  gap: 8px;
+
+  background: $light-greyscale-bg-light;
+
+  @media (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+
+  & > button {
+    padding: 8px 16px;
+
+    display: flex;
+    justify-content: center;
+
+    flex: 50%;
+
+    color: $light-greyscale-text-secondary;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+}
+
+.selected {
+  border-radius: 8px;
+  color: $light-greyscale-white !important;
+
+  background: $light-assents-accent-1-primary;
+}

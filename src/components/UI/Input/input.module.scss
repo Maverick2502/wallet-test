@@ -1,0 +1,71 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.root {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+
+.input,
+.disabled_input {
+  height: 100%;
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: $light-greyscale-text-secondary;
+
+  overflow: hidden;
+  resize: none;
+  border: 1px solid transparent;
+  transition: 100ms linear;
+
+  padding: 30px 16px 16px 16px;
+
+  border-radius: 8px;
+
+  background: $light-greyscale-bg-light;
+}
+
+.disabled_input {
+  display: flex;
+  align-items: center;
+
+  color: $light-greyscale-text-secondary;
+
+  background-color: $light-greyscale-disabled-bg;
+}
+
+.placeholder {
+  position: absolute;
+  left: 16px;
+  top: 18px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: $light-greyscale-text-secondary;
+
+  transition: 70ms linear;
+  pointer-events: none;
+}
+
+.active {
+  border: 1px solid $light-assents-accent-2-primary;
+  border-radius: 8px;
+
+  .placeholder {
+    font-size: 12px;
+    font-weight: 500;
+    top: 6px;
+  }
+}
+
+.activeLightBg {
+  composes: active;
+
+  .input {
+    background-color: $light-assents-accent-1-quaternary;
+  }
+}

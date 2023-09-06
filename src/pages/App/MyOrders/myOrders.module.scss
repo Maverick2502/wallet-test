@@ -1,0 +1,89 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.card {
+  height: calc(100% - 512px);
+
+  &_header {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+  }
+}
+
+.table-responsive {
+  overflow: auto;
+
+  &::-webkit-scrollbar-track {
+    background: $light-greyscale-disabled-bg;
+    border-radius: 16px;
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    border-radius: 16px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-greyscale-icons;
+
+    &:hover {
+      background-color: $light-greyscale-icons;
+      background-color: rgba(171, 182, 183, 0.688);
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  @media (max-width: $breakpoint-sm) {
+    width: 500px;
+  }
+
+  &_head > th,
+  &_body > td {
+    padding: 15px 0;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  &_head {
+    & > th {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+
+      line-height: 100%;
+      letter-spacing: -0.24px;
+
+      color: $light-greyscale-text-tertiary;
+    }
+  }
+
+  &_body {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+
+    line-height: 100%;
+    letter-spacing: -0.28px;
+
+    color: $light-greyscale-text-primary;
+
+    border-bottom: 1px solid $light-greyscale-dividers;
+  }
+
+  & > tr:not(:first-child):hover {
+    border-radius: 16px;
+    border-bottom: 1px solid $light-greyscale-dividers;
+    background: $light-greyscale-white;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  }
+}
